@@ -1,10 +1,16 @@
  <html>
-      <head></head>
-      <body>
+    <head></head>
+    <body>
         <script>
-          setTimeout(function () {
-            window.ReactNativeWebView.postMessage("Hello!")
-          }, 2000)
+            setTimeout(function () {
+                window.ReactNativeWebView.postMessage("Hello!")
+            }, 2000);
+			
+			window.onload = function(){
+				window.addEventListener("message",function(event){
+				alert("iOS:"+event.data)
+				})
+			}
         </script>
-      </body>
-      </html>
+    </body>
+</html>
